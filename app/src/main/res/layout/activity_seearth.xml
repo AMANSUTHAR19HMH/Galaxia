@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/galaxiabackground">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/galaxiaearth_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="GALAXIA"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/transearth"
+            android:layout_width="match_parent"
+            android:layout_height="259dp"
+            android:layout_below="@id/galaxiaearth_title"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/transearth" />
+
+        <TextView
+            android:id="@+id/earth_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/transearth"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="EARTH- The Third Planet from the Sun"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="21sp"
+            android:textStyle="italic"/>
+
+        <TextView
+            android:id="@+id/earth_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/earth_text"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:text="Basic Information:\nType: Terrestrial planet\nOrder from Sun: 3rd planet\nDistance from Sun: ~149.6 million km (~1 AU)\nDiameter: 12,742 km\nMass: ~5.972 × 10²⁴ kg\nGravity: 9.8 m/s²\n\nOrbital And Rotational Characteristics:\nRevolution period (around Sun): 365.25 Earth days\nRotation period (on its own axis): 23.93 hours\nOrbital Speed: 29.78 km/s\nAxial Tilt: ~23.44° (causes seasons)\nOrbital Eccentricity: 0.0167\n\nMoons And Rings:\nNumber of Moons: 1 (Moon)\nNumber of Rings: 0\n\nSurface And Atmosphere:\nSurface Temperature:\nAverage: ~15°C (59°F)\nSurface Composition: 71% water, 29% land (rock, soil, ice)\nAtmosphere Type: Thick, supports life\nMain Gases in Atmosphere: Nitrogen (78%), Oxygen (21%), Argon, Carbon Dioxide\nWeather Conditions: Diverse climate zones, weather variations" />
+
+    </RelativeLayout>
+</ScrollView>

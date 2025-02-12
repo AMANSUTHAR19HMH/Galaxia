@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/galaxiabackground">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/galaxia_jupiter_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="GALAXIA"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/trans_jupiter"
+            android:layout_width="match_parent"
+            android:layout_height="259dp"
+            android:layout_below="@id/galaxia_jupiter_title"
+            android:layout_marginTop="10dp"
+            android:layout_centerInParent="true"
+            android:src="@drawable/transjupyter" />
+
+        <TextView
+            android:id="@+id/jupiter_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/trans_jupiter"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="JUPITER- The Fifth Planet from the Sun"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="21sp"
+            android:textStyle="italic"/>
+
+        <TextView
+            android:id="@+id/jupiter_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/jupiter_text"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:text="Basic Information:\nType: Gas Giant\nOrder from Sun: 5th planet\nDistance from Sun: ~778.5 million km (~5.2 AU)\nDiameter: 139,820 km (largest planet in the Solar System)\nMass: ~1.898 × 10^27 kg (about 318 times Earth's mass)\nGravity: 24.79 m/s² (2.5 times Earth's gravity)\n\nOrbital And Rotational Characteristics:\nRevolution period (around Sun): 11.86 Earth years\nRotation period (on its own axis): 9.93 hours (fastest rotation among planets)\nOrbital Speed: 13.07 km/s\nAxial Tilt: 3.13° (mild seasons)\nOrbital Eccentricity: 0.0489\n\nMoons And Rings:\nNumber of Moons: 95 (including Ganymede, the largest moon in the Solar System)\nNumber of Rings: 4 (faint ring system)\n\nSurface And Atmosphere:\nSurface Temperature: ~ -145°C (-234°F)\nSurface Composition: No solid surface, composed mainly of hydrogen and helium\nAtmosphere Type: Thick and stormy\nMain Gases in Atmosphere: Hydrogen (H₂), Helium (He), Methane (CH₄), Ammonia (NH₃)\nWeather Conditions: Extreme storms, including the Great Red Spot (a massive storm larger than Earth)" />
+
+    </RelativeLayout>
+</ScrollView>

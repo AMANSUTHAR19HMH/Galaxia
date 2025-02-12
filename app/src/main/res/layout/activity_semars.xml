@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/galaxiabackground">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/galaxia_mars_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="GALAXIA"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
+
+        <ImageView
+            android:id="@+id/trans_mars"
+            android:layout_width="match_parent"
+            android:layout_height="259dp"
+            android:layout_below="@id/galaxia_mars_title"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/transmars" />
+
+        <TextView
+            android:id="@+id/mars_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/trans_mars"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="MARS- The Forth Planet from the Sun"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="21sp"
+            android:textStyle="italic"/>
+
+        <TextView
+            android:id="@+id/mars_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/mars_text"
+            android:layout_marginTop="10dp"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:text="Basic Information:\nType: Terrestrial planet\nOrder from Sun: 4th planet\nDistance from Sun: ~227.94 million km (~1.52 AU)\nDiameter: 6,779 km\nMass: ~6.417 × 10^23 kg (about 10.7% of Earth's mass)\nGravity: 3.71 m/s² (about 38% of Earth's gravity)\n\nOrbital And Rotational Characteristics:\nRevolution period (around Sun): 687 Earth days\nRotation period (on its own axis): 24.6 hours\nOrbital Speed: 24.077 km/s\nAxial Tilt: ~25.19° (has seasons similar to Earth)\nOrbital Eccentricity: 0.0934\n\nMoons And Rings:\nNumber of Moons: 2 (Phobos and Deimos)\nNumber of Rings: 0\n\nSurface And Atmosphere:\nSurface Temperature:\nDay: Up to 20°C (68°F)\nNight: Down to -125°C (-195°F)\nSurface Composition: Rocky, covered with iron oxide (rust), giving it a reddish color\nAtmosphere Type: Thin\nMain Gases in Atmosphere: Carbon Dioxide (CO₂), Nitrogen (N₂), Argon (Ar)\nWeather Conditions: Dust storms, thin atmosphere, low air pressure" />
+    </RelativeLayout>
+</ScrollView>
