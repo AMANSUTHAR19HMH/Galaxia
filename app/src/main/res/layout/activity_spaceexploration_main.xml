@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/galaxiabackground">
 
+
     <!-- GALAXIA Title -->
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/background" />
+
     <TextView
         android:id="@+id/galaxia_title"
         android:layout_width="wrap_content"
@@ -18,392 +24,288 @@
         android:textAlignment="center"
         android:textColor="@color/white"
         android:textSize="30sp"
-        android:textStyle="bold"/>
+        android:textStyle="bold" />
 
-    <!-- ScrollView containing the main UI -->
+    <LinearLayout
+        android:id="@+id/search_"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_below="@id/galaxia_title"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/searchbackground"
+        android:orientation="horizontal"
+        android:padding="2dp">
+
+        <ImageView
+            android:id="@+id/search_icon"
+            android:layout_width="42dp"
+            android:layout_height="35dp"
+            android:padding="5dp"
+            android:src="@drawable/search" />
+
+        <EditText
+            android:id="@+id/search_bar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:hint="Search Planet"
+            android:padding="3dp" />
+    </LinearLayout>
+
+    <!-- ScrollView for planets -->
     <ScrollView
         android:id="@+id/main"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/galaxia_title"
-        tools:context=".wwdress">
+        android:layout_below="@id/search_">
 
-        <androidx.constraintlayout.widget.ConstraintLayout
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="10dp">
 
-            <!-- Search Bar -->
-            <RelativeLayout
+            <!-- Row 1: Planet 1 and Planet 2 -->
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:padding="1dp"
-                android:background="#EEE"
-                tools:ignore="MissingConstraints">
+                android:gravity="center"
+                android:orientation="horizontal">
 
-                <Spinner
-                    android:id="@+id/spinner_sort"
-                    android:layout_width="wrap_content"
+                <LinearLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentRight="true"
-                    android:layout_marginRight="9dp"/>
-            </RelativeLayout>
-
-            <ImageView
-                android:id="@+id/search_icon"
-                android:layout_width="42dp"
-                android:layout_height="45dp"
-                android:src="@drawable/search"
-                app:layout_constraintBottom_toBottomOf="@id/search_bar"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintVertical_bias="0.0"/>
-
-            <!-- Search Bar -->
-            <EditText
-                android:id="@+id/search_bar"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:background="@color/white"
-                android:hint="Search Planet"
-                android:padding="10dp"
-                app:layout_constraintBottom_toBottomOf="@id/search_icon"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/search_icon"
-                app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintWidth_percent="0.85"/>
-
-            <!-- planet 1 -->
-            <LinearLayout
-                android:id="@+id/planet1_layout"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintEnd_toStartOf="@id/planet2_layout"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/search_bar"
-                app:layout_constraintWidth_percent="0.5">
-
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <ImageButton
-                        android:id="@+id/planet1"
-                        android:layout_width="match_parent"
-                        android:layout_height="207dp"
-                        android:layout_marginTop="16dp"
-                        android:scaleType="centerCrop"
-                        android:background=""
-                        android:src="@drawable/transmercury" />
-
-                    <!-- Heart & Star Buttons -->
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="bottom|end"
-                        android:layout_margin="8dp"
-                        android:orientation="vertical">
-                    </LinearLayout>
-
-                    <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_gravity="bottom|start"
-                        android:layout_margin="8dp"
-                        android:orientation="vertical">
-                    </LinearLayout>
-                </FrameLayout>
-
-                <TextView
-                    android:id="@+id/planet1_name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="8dp"
-                    android:text="MERCURY"
+                    android:layout_weight="1"
                     android:gravity="center"
-                    android:textColor="@android:color/white"
-                    android:textSize="16sp"/>
-            </LinearLayout>
-
-            <!-- planet 2  -->
-            <LinearLayout
-                android:id="@+id/planet2_layout"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/planet1_layout"
-                app:layout_constraintTop_toBottomOf="@id/search_bar"
-                app:layout_constraintWidth_percent="0.5">
-
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:orientation="vertical">
 
                     <ImageButton
-                        android:id="@+id/planet2"
-                        android:layout_width="202dp"
-                        android:layout_height="207dp"
-                        android:layout_marginTop="16dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/transvenus"
-                        android:background=""/>
+                        android:id="@+id/mercury"
+                        android:layout_width="150dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_height="150dp"
+                        android:background="@drawable/transmercury"
+                        android:scaleType="centerCrop" />
 
-                    <LinearLayout
+                    <TextView
+                        android:id="@+id/mercurry"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="bottom|end"
-                        android:layout_margin="8dp"
-                        android:orientation="vertical">
-                    </LinearLayout>
-                </FrameLayout>
+                        android:gravity="center"
+                        android:text="MERCURY"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+                </LinearLayout>
 
-                <TextView
-                    android:id="@+id/planet2_name"
-                    android:layout_width="match_parent"
+                <LinearLayout
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:padding="8dp"
-                    android:text="VENUS"
-                    android:textColor="@color/white"
-                    android:textAlignment="center"
-                    android:textSize="16sp"/>
-
-            </LinearLayout>
-            <!-- Planet 3 -->
-            <LinearLayout
-                android:id="@+id/planet3_layout"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintEnd_toStartOf="@id/planet4_layout"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/planet1_layout"
-                app:layout_constraintWidth_percent="0.5">
-
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
                     <ImageButton
-                        android:id="@+id/planet3"
-                        android:layout_width="match_parent"
-                        android:layout_height="207dp"
-                        android:layout_marginTop="16dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/transearth"
-                        android:background=""/>
-                </FrameLayout>
+                        android:id="@+id/venus"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="@drawable/transvenus"
+                        android:scaleType="centerCrop" />
 
-                <TextView
-                    android:id="@+id/planet3_name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="8dp"
-                    android:text="EARTH"
-                    android:textAlignment="center"
-                    android:textColor="@color/white"
-                    android:textSize="16sp" />
-
-
-            </LinearLayout>
-
-            <!-- Planet 4 -->
-            <LinearLayout
-                android:id="@+id/planet4_layout"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/planet3_layout"
-                app:layout_constraintTop_toBottomOf="@id/planet2_layout"
-                app:layout_constraintWidth_percent="0.5">
-
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <ImageButton
-                        android:id="@+id/planet4"
-                        android:layout_width="match_parent"
-                        android:layout_height="207dp"
-                        android:layout_marginTop="16dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/transmars"
-                        android:background=""/>
-                </FrameLayout>
-                <TextView
-                    android:id="@+id/planet4_name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="8dp"
-                    android:text="MARS"
-                    android:textAlignment="center"
-                    android:textColor="@color/white"
-                    android:textSize="16sp" />
-
-            </LinearLayout>
-
-            <!-- Planet 5 -->
-            <LinearLayout
-                android:id="@+id/planet5_layout"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintEnd_toStartOf="@id/planet6_layout"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/planet3_layout"
-                app:layout_constraintWidth_percent="0.5">
-
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-
-                    <ImageButton
-                        android:id="@+id/planet5"
-                        android:layout_width="match_parent"
-                        android:layout_height="207dp"
-                        android:layout_marginTop="16dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/transjupyter"
-                        android:background=""/>
-
-                    <!-- Heart Button and Count -->
-                    <LinearLayout
+                    <TextView
+                        android:id="@+id/planet2_name"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_gravity="bottom|end"
-                        android:layout_margin="8dp"
-                        android:orientation="vertical">
-
-
-                    </LinearLayout>
-
-
-
-                </FrameLayout>
-
-                <TextView
-                    android:id="@+id/planet5_name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="8dp"
-                    android:text="JUPITER"
-                    android:textAlignment="center"
-                    android:textColor="@color/white"
-                    android:textSize="16sp" />
+                        android:gravity="center"
+                        android:text="VENUS"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+                </LinearLayout>
             </LinearLayout>
-            <!-- Planet 6 -->
-            <LinearLayout
-                android:id="@+id/planet6_layout"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/planet5_layout"
-                app:layout_constraintTop_toBottomOf="@id/planet4_layout"
-                app:layout_constraintWidth_percent="0.5">
 
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+            <!-- Row 2: Planet 3 and Planet 4 -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
                     <ImageButton
-                        android:id="@+id/planet6"
-                        android:layout_width="match_parent"
-                        android:layout_height="207dp"
-                        android:layout_marginTop="16dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/transsaturn"
-                        android:background=""/>
-                </FrameLayout>
-                <TextView
-                    android:id="@+id/planet6_name"
-                    android:layout_width="match_parent"
+                        android:id="@+id/earth"
+                        android:layout_width="150dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_height="150dp"
+                        android:background="@drawable/transearth"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:id="@+id/planet3_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="EARTH"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:id="@+id/marslayout"
                     android:layout_height="wrap_content"
-                    android:padding="8dp"
-                    android:text="SATURN"
-                    android:textAlignment="center"
-                    android:textColor="@color/white"
-                    android:textSize="16sp" />
-
-            </LinearLayout>
-            <!-- planet 7  -->
-            <LinearLayout
-                android:id="@+id/planet7_layout"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintEnd_toStartOf="@id/planet8_layout"
-                app:layout_constraintHorizontal_bias="0.0"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toBottomOf="@id/planet5_layout"
-                app:layout_constraintWidth_percent="0.5">
-
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
                     <ImageButton
-                        android:id="@+id/planet7"
-                        android:layout_width="match_parent"
-                        android:layout_height="207dp"
-                        android:layout_marginTop="16dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/transuranus"
-                        android:background=""/>
-                </FrameLayout>
+                        android:id="@+id/mars"
+                        android:layout_width="150dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_height="150dp"
+                        android:background="@drawable/transmars"
+                        android:scaleType="centerCrop" />
 
-                <TextView
-                    android:id="@+id/planet7_name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="8dp"
-                    android:text="URANUS"
-                    android:textAlignment="center"
-                    android:textColor="@color/white"
-                    android:textSize="16sp" />
-
-
+                    <TextView
+                        android:id="@+id/marstxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="MARS"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+                </LinearLayout>
             </LinearLayout>
-            <!-- Planet 8-->
-            <LinearLayout
-                android:id="@+id/planet8_layout"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:orientation="vertical"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toEndOf="@id/planet7_layout"
-                app:layout_constraintTop_toBottomOf="@id/planet6_layout"
-                app:layout_constraintWidth_percent="0.5">
 
-                <FrameLayout
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
 
                     <ImageButton
-                        android:id="@+id/planet8"
-                        android:layout_width="match_parent"
-                        android:layout_height="207dp"
-                        android:layout_marginTop="16dp"
-                        android:scaleType="centerCrop"
-                        android:src="@drawable/transneptune"
-                        android:background=""/>
-                </FrameLayout>
-                <TextView
-                    android:id="@+id/planet8_name"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="8dp"
-                    android:text="NEPTUNE"
-                    android:textAlignment="center"
-                    android:textColor="@color/white"
-                    android:textSize="16sp" />
+                        android:id="@+id/jupiter"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:background="@drawable/transjupyter"
+                        android:scaleType="centerCrop" />
 
+                    <TextView
+                        android:id="@+id/trans_jupiter"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="JUPITER"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/naptune"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_width="150dp"
+                        android:layout_height="150dp"
+                        android:background="@drawable/transneptune"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:id="@+id/planet6_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="NEPTUNE"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+                </LinearLayout>
             </LinearLayout>
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/uranus"
+                        android:layout_width="150dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_height="150dp"
+                        android:background="@drawable/transuranus"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:id="@+id/uranustxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="URANUS"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:orientation="vertical">
+
+                    <ImageButton
+                        android:id="@+id/saturn"
+                        android:layout_width="150dp"
+                        android:clickable="true"
+                        android:focusable="true"
+                        android:layout_height="150dp"
+                        android:background="@drawable/transsaturn"
+                        android:scaleType="centerCrop" />
+
+                    <TextView
+                        android:id="@+id/staturn"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="SATURN"
+                        android:textColor="@android:color/white"
+                        android:textSize="16sp" />
+                </LinearLayout>
+            </LinearLayout>
+        </LinearLayout>
     </ScrollView>
 </RelativeLayout>

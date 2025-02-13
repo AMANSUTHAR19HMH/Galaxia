@@ -1,0 +1,12 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/btnExplore"
+        android:icon="@drawable/explore"
+        android:title="Explore" />
+    <item
+        android:id="@+id/btnAsteroids"
+        android:title="Asteroids" />
+    <item
+        android:id="@+id/btnConstellations"
+        android:title="Constellations" />
+</menu>

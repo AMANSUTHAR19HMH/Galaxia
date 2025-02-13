@@ -47,5 +47,5 @@ dependencies {
     implementation("com.squareup.retrofit2:converter-gson:2.9.0")
     implementation("androidx.recyclerview:recyclerview:1.2.1")
     implementation("com.google.android.material:material:1.6.1")
-    implementation ("com.airbnb.android:lottie:6.1.0")
+    implementation("com.airbnb.android:lottie:6.1.0")
 }

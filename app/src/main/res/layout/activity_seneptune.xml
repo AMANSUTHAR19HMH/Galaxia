@@ -1,55 +1,56 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/galaxiabackground">
 
-    <TextView
-        android:id="@+id/galaxianeptune_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:text="GALAXIA"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="30sp"
-        android:textStyle="bold" />
-
-    <ImageView
-        android:id="@+id/transneptune"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="259dp"
-        android:layout_below="@id/galaxianeptune_title"
-        android:layout_centerInParent="true"
-        android:layout_marginTop="10dp"
-        android:src="@drawable/transneptune" />
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/neptune_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/transneptune"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:text="NEPTUNE- The Eight Planet from the Sun"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="21sp"
-        android:textStyle="italic"/>
+        <TextView
+            android:id="@+id/galaxianeptune_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="GALAXIA"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/neptune_text"
-        android:layout_marginTop="10dp">
+        <ImageView
+            android:id="@+id/transneptune"
+            android:layout_width="match_parent"
+            android:layout_height="259dp"
+            android:layout_below="@id/galaxianeptune_title"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/transneptune" />
+
+        <TextView
+            android:id="@+id/neptune_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/transneptune"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="NEPTUNE- The Eight Planet from the Sun"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="21sp"
+            android:textStyle="italic" />
 
         <TextView
             android:id="@+id/neptune_info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/neptune_text"
             android:padding="10dp"
+            android:text="Basic Information:\nType: Ice Giant\nOrder from Sun: 8th planet\nDistance from Sun: ~4.5 billion km (~30.07 AU)\nDiameter: 49,244 km\nMass: ~1.024 × 10²⁶ kg (about 17 times Earth's mass)\nGravity: 11.15 m/s² (about 114% of Earth's gravity)\n\nOrbital And Rotational Characteristics:\nRevolution period (around Sun): 164.8 Earth years\nRotation period (on its own axis): 16.11 Earth hours\nOrbital Speed: 5.43 km/s\nAxial Tilt: ~28.32°\nOrbital Eccentricity: 0.0086\n\nMoons And Rings:\nNumber of Moons: 14 (largest moon: Triton)\nNumber of Rings: 6\n\nSurface And Atmosphere:\nSurface Temperature: ~ -214°C (-353°F)\nAtmosphere Type: Thick, mainly hydrogen, helium, and methane\nMain Gases in Atmosphere: Hydrogen (H₂), Helium (He), Methane (CH₄)\nWeather Conditions: Fastest winds in the Solar System (up to 2,100 km/h), massive storms, deep blue color due to methane"
             android:textColor="@color/white"
-            android:textSize="16sp"
-            android:text="Basic Information:\nType: Ice Giant\nOrder from Sun: 8th planet\nDistance from Sun: ~4.5 billion km (~30.07 AU)\nDiameter: 49,244 km\nMass: ~1.024 × 10²⁶ kg (about 17 times Earth's mass)\nGravity: 11.15 m/s² (about 114% of Earth's gravity)\n\nOrbital And Rotational Characteristics:\nRevolution period (around Sun): 164.8 Earth years\nRotation period (on its own axis): 16.11 Earth hours\nOrbital Speed: 5.43 km/s\nAxial Tilt: ~28.32°\nOrbital Eccentricity: 0.0086\n\nMoons And Rings:\nNumber of Moons: 14 (largest moon: Triton)\nNumber of Rings: 6\n\nSurface And Atmosphere:\nSurface Temperature: ~ -214°C (-353°F)\nAtmosphere Type: Thick, mainly hydrogen, helium, and methane\nMain Gases in Atmosphere: Hydrogen (H₂), Helium (He), Methane (CH₄)\nWeather Conditions: Fastest winds in the Solar System (up to 2,100 km/h), massive storms, deep blue color due to methane" />
-    </ScrollView>
-</RelativeLayout>
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+</ScrollView>

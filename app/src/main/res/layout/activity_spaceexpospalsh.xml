@@ -38,5 +38,4 @@
         app:lottie_loop="true"
         android:visibility="visible"/>
 
-
 </RelativeLayout>

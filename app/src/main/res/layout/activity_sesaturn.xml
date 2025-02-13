@@ -1,56 +1,57 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/galaxiabackground">
 
-    <TextView
-        android:id="@+id/galaxiasaturn_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:text="GALAXIA"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="30sp"
-        android:textStyle="bold" />
-
-    <ImageView
-        android:layout_marginTop="10dp"
-        android:id="@+id/transsaturn"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="259dp"
-        android:layout_below="@id/galaxiasaturn_title"
-        android:layout_centerInParent="true"
-        android:src="@drawable/transsaturn" />
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/saturn_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/transsaturn"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:text="SATURN- The Sixth Planet from the Sun"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="21sp"
-        android:textStyle="italic"/>
+        <TextView
+            android:id="@+id/galaxiasaturn_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="GALAXIA"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/saturn_text"
-        android:layout_marginTop="10dp">
+        <ImageView
+            android:id="@+id/transsaturn"
+            android:layout_width="match_parent"
+            android:layout_height="259dp"
+            android:layout_below="@id/galaxiasaturn_title"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/transsaturn" />
+
+        <TextView
+            android:id="@+id/saturn_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/transsaturn"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="SATURN- The Sixth Planet from the Sun"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="21sp"
+            android:textStyle="italic" />
+
 
         <TextView
             android:id="@+id/saturn_info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@id/saturn_text"
             android:padding="10dp"
+            android:text="Basic Information:\nType: Gas Giant\nOrder from Sun: 6th planet\nDistance from Sun: ~1.43 billion km (~9.58 AU)\nDiameter: 120,536 km (second largest planet)\nMass: ~5.683 × 10²⁶ kg (about 95 times Earth's mass)\nGravity: 10.44 m/s² (similar to Earth's gravity)\n\nOrbital And Rotational Characteristics:\nRevolution period (around Sun): 29.46 Earth years\nRotation period (on its own axis): 10.7 hours\nOrbital Speed: 9.69 km/s\nAxial Tilt: 26.73° (causes seasons)\nOrbital Eccentricity: 0.054\n\nMoons And Rings:\nNumber of Moons: 146 confirmed moons\nNumber of Rings: 7 main ring groups, composed mostly of ice\n\nSurface And Atmosphere:\nSurface Temperature:\nAverage: -178°C (-288°F)\nSurface Composition: Gas-based, no solid surface\nAtmosphere Type: Thick atmosphere\nMain Gases in Atmosphere: Hydrogen (H₂), Helium (He), Methane (CH₄), Ammonia (NH₃)\nWeather Conditions: Strong storms, winds up to 1,800 km/h (1,118 mph), famous hexagonal storm at its north pole"
             android:textColor="@color/white"
-            android:textSize="16sp"
-            android:text="Basic Information:\nType: Gas Giant\nOrder from Sun: 6th planet\nDistance from Sun: ~1.43 billion km (~9.58 AU)\nDiameter: 120,536 km (second largest planet)\nMass: ~5.683 × 10²⁶ kg (about 95 times Earth's mass)\nGravity: 10.44 m/s² (similar to Earth's gravity)\n\nOrbital And Rotational Characteristics:\nRevolution period (around Sun): 29.46 Earth years\nRotation period (on its own axis): 10.7 hours\nOrbital Speed: 9.69 km/s\nAxial Tilt: 26.73° (causes seasons)\nOrbital Eccentricity: 0.054\n\nMoons And Rings:\nNumber of Moons: 146 confirmed moons\nNumber of Rings: 7 main ring groups, composed mostly of ice\n\nSurface And Atmosphere:\nSurface Temperature:\nAverage: -178°C (-288°F)\nSurface Composition: Gas-based, no solid surface\nAtmosphere Type: Thick atmosphere\nMain Gases in Atmosphere: Hydrogen (H₂), Helium (He), Methane (CH₄), Ammonia (NH₃)\nWeather Conditions: Strong storms, winds up to 1,800 km/h (1,118 mph), famous hexagonal storm at its north pole" />
-    </ScrollView>
-</RelativeLayout>
+            android:textSize="16sp" />
+
+    </RelativeLayout>
+</ScrollView>

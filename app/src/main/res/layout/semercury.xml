@@ -1,57 +1,58 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/galaxiabackground">
 
-    <TextView
-        android:id="@+id/galaxiamercury_title"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:text="GALAXIA"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="30sp"
-        android:textStyle="bold" />
-
-    <ImageView
-        android:layout_marginTop="10dp"
-        android:id="@+id/transmercury"
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="259dp"
-        android:layout_below="@id/galaxiamercury_title"
-        android:layout_centerInParent="true"
-        android:src="@drawable/transmercury" />
+        android:layout_height="wrap_content">
 
-    <TextView
-        android:id="@+id/mercuryy_text"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/transmercury"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="10dp"
-        android:text="MERCURYY- The First Planet from the Sun"
-        android:textAlignment="center"
-        android:textColor="@color/white"
-        android:textSize="21sp"
-        android:textStyle="italic"/>
+        <TextView
+            android:id="@+id/galaxiamercury_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="GALAXIA"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="30sp"
+            android:textStyle="bold" />
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/mercuryy_text"
-        android:layout_marginTop="10dp">
+        <ImageView
+            android:id="@+id/transmercury"
+            android:layout_width="match_parent"
+            android:layout_height="259dp"
+            android:layout_below="@id/galaxiamercury_title"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/transmercury" />
+
+        <TextView
+            android:id="@+id/mercuryy_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/transmercury"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="MERCURYY- The First Planet from the Sun"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="21sp"
+            android:textStyle="italic" />
+
 
         <TextView
             android:id="@+id/mercury_info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_below="@+id/mercuryy_text"
             android:padding="10dp"
+            android:text="Basic Information:\nType: Terrestrial planet\nOrder from Sun: 1st planet\nDistance from Sun: ~57.91 million km (~0.39 AU)\nDiameter: 4,879 km (smallest planet in the Solar System)\nMass: ~3.301 × 10²³ kg (about 5.5% of Earth's mass)\nGravity: 3.7 m/s² (about 38% of Earth's gravity)\n\nOrbital And Rotational Characteristics:\nRevolution period (around Sun): 87.97 Earth days\nRotation period (on its own axis): 58.65 Earth days\nOrbital Speed: 47.87 km/s (fastest planet in the Solar System)\nAxial Tilt: ~0.034° (almost no tilt, so no significant seasons)\nOrbital Eccentricity: 0.2056 (most elliptical orbit among planets)\n\nMoons And Rings:\nNumber of Moons: 0 (Mercury has no natural satellites)\nNumber of Rings: 0\n\nSurface And Atmosphere:\nSurface Temperature:\nDay: Up to 430°C (800°F)\nNight: Down to -180°C (-290°F)\nSurface Composition: Rocky, covered with craters (similar to the Moon)\nAtmosphere Type: Extremely thin (exosphere)\nMain Gases in Atmosphere: Oxygen (O₂), Sodium (Na), Hydrogen (H₂), Helium (He), Potassium (K)\nWeather Conditions: No stable atmosphere, extreme temperature variations"
             android:textColor="@color/white"
-            android:textSize="16sp"
-            android:text="Basic Information:\nType: Terrestrial planet\nOrder from Sun: 1st planet\nDistance from Sun: ~57.91 million km (~0.39 AU)\nDiameter: 4,879 km (smallest planet in the Solar System)\nMass: ~3.301 × 10²³ kg (about 5.5% of Earth's mass)\nGravity: 3.7 m/s² (about 38% of Earth's gravity)\n\nOrbital And Rotational Characteristics:\nRevolution period (around Sun): 87.97 Earth days\nRotation period (on its own axis): 58.65 Earth days\nOrbital Speed: 47.87 km/s (fastest planet in the Solar System)\nAxial Tilt: ~0.034° (almost no tilt, so no significant seasons)\nOrbital Eccentricity: 0.2056 (most elliptical orbit among planets)\n\nMoons And Rings:\nNumber of Moons: 0 (Mercury has no natural satellites)\nNumber of Rings: 0\n\nSurface And Atmosphere:\nSurface Temperature:\nDay: Up to 430°C (800°F)\nNight: Down to -180°C (-290°F)\nSurface Composition: Rocky, covered with craters (similar to the Moon)\nAtmosphere Type: Extremely thin (exosphere)\nMain Gases in Atmosphere: Oxygen (O₂), Sodium (Na), Hydrogen (H₂), Helium (He), Potassium (K)\nWeather Conditions: No stable atmosphere, extreme temperature variations" />
-    </ScrollView>
+            android:textSize="16sp" />
 
-</RelativeLayout>
+
+    </RelativeLayout>
+</ScrollView>
